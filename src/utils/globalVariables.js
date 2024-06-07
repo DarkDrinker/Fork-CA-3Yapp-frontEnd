@@ -1,1 +1,1 @@
-export const BASE_URL = "https://yappapi.anderswadejensen.com/api";
+export const BASE_URL = "https://yappap.anderswadejensen.com/api";
