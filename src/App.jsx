@@ -1,4 +1,4 @@
-import { BrowserRouter,  Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Login } from './page/Login'
 import {Mainpage} from './page/Mainpage'
 import SpecificThread from './page/SpecificThread'
@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import {CreateThread} from './page/CreateThread';
 import { AppLayout } from './layout/AppLayout'
 import { AccountPage } from './page/accountPage'
-import PageNotFound from "./page/PageNotFound.jsx";
+import {PageNotFound} from "./page/PageNotFound.jsx";
 import { TokenValidator } from './page/TokenValidator'
 import {SpecificUser} from './page/SpecificUser';
 
@@ -57,7 +57,7 @@ function App() {
                 <AppLayout  search={search} setSearch={setSearch}/>
               }>
             
-              {/*All routes under here, have the AppLayout rendered ontop of it.*/}
+              {/*All routes under here, have the AppLayout rendered ontop of it. tror jeg faktisk er forkert sagt. Det er child routes under her der vil blive rendered under AppLayout*/}
                 <Route path="/home" element={<Mainpage search={search}/>}/>
                 <Route path="/thread/:id" element={<SpecificThread loggedInUser={loggedInUser} />} />
                 <Route path="/user/:id" element={<SpecificUser />}/>
